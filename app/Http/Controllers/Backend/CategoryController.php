@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
+use App\Models\Category; // Category Model Link
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-// Category Model Link
-use App\Category;
 use Image;
 use File;
+
 class CategoryController extends Controller
 {   // Create category page shwo function
     public function CreateCategory(){

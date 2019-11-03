@@ -21,7 +21,7 @@
 
  Route::group(['prefix' => 'admin'], function(){
     // Admin page show
-    Route::get('/','PagesController@index')->name('dashboard');
+    Route::get('/','Backend\PagesController@index')->name('dashboard');
     
 
 
@@ -38,17 +38,17 @@
     //============== Product serction start=======================================
  Route::group(['prefix' => 'product'], function(){
      // Product related all page show Routes
-    Route::get('/createproduct','ProductsController@CreateProduct')->name('Backend.pages.product.createproduct');
-    Route::get('/manageproduct','ProductsController@ManageProduct')->name('Backend.pages.product.manageproduct');
-    Route::get('/editproduct/{id}','ProductsController@EditProduct')->name('Backend.pages.product.editproduct');
+    Route::get('/createproduct','Backend\ProductsController@CreateProduct')->name('Backend.pages.product.createproduct');
+    Route::get('/manageproduct','Backend\ProductsController@ManageProduct')->name('Backend.pages.product.manageproduct');
+    Route::get('/editproduct/{id}','Backend\ProductsController@EditProduct')->name('Backend.pages.product.editproduct');
     
     //  Product Backend Routes
     // StorePruduct
-    Route::post('/storeproduct','ProductsController@StoreProduct')->name('storeproduct');
+    Route::post('/storeproduct','Backend\ProductsController@StoreProduct')->name('storeproduct');
     // Edit Product
-    Route::post('/updateproduct/{id}','ProductsController@ProductUpdate')->name('productupdate');
+    Route::post('/updateproduct/{id}','Backend\ProductsController@ProductUpdate')->name('productupdate');
     //Delete Product
-    Route::post('/deleteproduct/{id}','ProductsController@DeletePorduct')->name('deleteproduct');
+    Route::post('/deleteproduct/{id}','Backend\ProductsController@DeletePorduct')->name('deleteproduct');
    
 });
 // ================== Product section end=========================================
@@ -68,14 +68,14 @@
 // ================== Category Section Start =====================================
 Route::group(['prefix' => 'category'],function(){
     // Category related all page show routes
-    Route::get('/createcategory', 'CategoryController@CreateCategory')->name('createcategory');
-    Route::get('/managecategory','CategoryController@ManageCategory')->name('managecategory');
-    Route::get('/editcategory/{id}','CategoryController@EditCategory')->name('editcategory');
+    Route::get('/createcategory', 'Backend\CategoryController@CreateCategory')->name('createcategory');
+    Route::get('/managecategory','Backend\CategoryController@ManageCategory')->name('managecategory');
+    Route::get('/editcategory/{id}','Backend\CategoryController@EditCategory')->name('editcategory');
 
     // Category Releted Backend Routes
-    Route::post('/storecategory','CategoryController@StoreCategory')->name('storecategory');
-    Route::post('/editcategory/{id}','CategoryController@UpdateCategory')->name('');
-    Route::post('/categorydelete/{id}','CategoryController@DeleteCategory')->name('deletecategory');
+    Route::post('/storecategory','Backend\CategoryController@StoreCategory')->name('storecategory');
+    Route::post('/editcategory/{id}','Backend\CategoryController@UpdateCategory')->name('');
+    Route::post('/categorydelete/{id}','Backend\CategoryController@DeleteCategory')->name('deletecategory');
 });
 
 

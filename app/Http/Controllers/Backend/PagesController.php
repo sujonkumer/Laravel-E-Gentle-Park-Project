@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
@@ -13,7 +13,7 @@ class PagesController extends Controller
 	}
 
     /*Master page Show*/
-    public function mastertemplate(){
-    	return view ('Backend.layouts.mastertemplate');
-    }
+    //public function mastertemplate(){
+    //	return view ('Backend.layouts.mastertemplate');
+    //}
 }

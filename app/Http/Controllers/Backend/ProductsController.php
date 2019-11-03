@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 // Product Model Link for Database Table Products
-use App\product;
+use App\Models\Product;
 use Image;
 // ProductImage Model Link for Database Table ProductImage, Image
-use App\product_image;
+use App\Models\ProductImage;
 use File;
 
 class ProductsController extends Controller
